@@ -1,9 +1,11 @@
 {
-  "name": "greeting",
-  "run": "node .launchpad/checks/round-1/test.mjs",
-  "timeoutSeconds": 60,
+  "name": "round 1: the clock",
+  "run": "node .launchpad/checks/round-1/run.mjs",
+  "timeoutSeconds": 120,
   "tests": [
-    "greet(\"Ada\")",
-    "greet(\"Grace Hopper\")"
+    "counts down to a deadline",
+    "says when the deadline is now or past",
+    "reads the clock when --now is left out",
+    "refuses bad input with a reason on stderr and nothing on stdout"
   ]
 }
